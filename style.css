@@ -1,0 +1,631 @@
+/* RESET */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ======= VARIABLES =======*/
+
+:root{
+  /* Fonts */
+  --black: 'Cera Pro Black', 'Cera Pro';
+  --bold: 'Cera Pro Bold', 'Cera Pro';
+  --medium: 'Cera Pro Medium', 'Cera Pro';
+  --regular: 'Cera Pro Regular', 'Cera Pro';
+  --light: 'Cera Pro Light', 'Cera Pro';
+  --italic: 'Cera Pro Italic', 'Cera Pro';
+  --light-italic : 'Cera Pro Light Italic';
+
+  /* Colors */
+  --secondary-color: #0058FF;
+  --primary-color:#111111;
+  --border-color: #D1D1D1;
+  --bg-color: #F3F4F7;
+}
+
+
+/* ============== ELEMENTS ============ */
+
+body{
+  color: var(--primary-color);
+  font-family: 'Cera Pro', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+h1{
+
+}
+
+h2{
+  font-size: 50px;
+  line-height: 50px;
+}
+
+h3{
+
+}
+
+h4 {
+  font-size: 35px;
+  line-height: 35px;
+}
+
+h5{
+  font-size: 25px;
+  line-height: 25px;
+}
+
+h6{
+
+}
+
+p{
+  font-family: var(--regular);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 0;
+}
+
+p.bold{
+  font-family: var(--medium);
+}
+
+a{
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color .2s 0s ease-in-out;
+}
+
+a:hover{
+  color: #949494;
+}
+
+ul {
+  list-style: none;
+}
+
+li{
+  padding: 15px;
+}
+
+/* ========== END OF ELEMENTS========== */
+
+
+/* ========== COMPONENTS ===========*/
+
+.container{
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* Button */
+.btn{
+  border: 1px solid var(--border-color);
+  display: inline;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.btn-blue{
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+
+.btn-dark{
+  background: var(--primary-color);
+  color: #ffffff;
+}
+/* End of button */
+
+
+/* Burger */
+.burger{
+  cursor: pointer;
+  display: none;
+  margin: 30px;
+}
+
+.burger .line{
+  background: var(--primary-color);
+  height: 2px;
+  margin: 5px;
+  width: 20px;
+  transition: all .5s ease-in-out;
+}
+/* End of burger */
+
+.logo{
+  font-family: var(--black);
+}
+
+/* ======== END OF COMPONENTS =========== */
+
+
+
+/*========== NAVIGATION BAR ===========*/
+
+nav {
+  align-items: center;
+  background: #ffffff;
+  display: flex;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
+}
+
+.nav-links {
+  display: flex;
+  flex: 3 1 auto;
+  flex-flow: row wrap;
+}
+
+.nav-links li:last-child{
+  margin-left: auto;
+}
+
+@media screen and (max-width: 800px){
+  .burger{
+    display: block;
+  }
+  
+  .nav-links {
+    width: 60%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8vh;
+    right: 0px;
+    height: 92vh;
+    background: var(--bg-color);
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  
+  .nav-links li:last-child{
+    margin-left: 0;
+  }
+  
+  .nav-links a {
+    /* color: #ffffff; */
+    font-family: var(--medium);
+    font-size: 15px;
+  }
+  
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .l1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .l2{
+  opacity: 0;
+}
+
+.toggle .l3{
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+nav .logo{
+  flex: 1 1 auto;
+  margin-left: 3%;
+}
+
+
+
+/* ========== END OF NAVIGATION BAR =============*/
+
+
+/* ========== SHOWCASE =============*/
+
+header {
+  background: url('/assets/images/MacBook-2015-6.png') no-repeat right /contain;
+  background-position-y: 120px;
+  height: 100vh;
+}
+
+.showcase-info{
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+  height: 90vh;
+  max-width: 40%;
+  padding-left: 40px;
+}
+
+.showcase-info>p{
+  margin: 30px 0;
+  max-width: 75%;
+}
+
+.showcase .container a img{
+  left: 50%;
+  position: relative;
+  right: 50%;
+  width: 20px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 800px){
+  
+  header{
+    background: url('/assets/images/MacBook-2015-6.png') no-repeat center center /contain;
+    background-position-y: auto;
+    background-position-x: -10px;
+  }
+
+  .showcase-info{
+    background: #ffffffa9;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0px 0px 00px;
+  }
+  
+  .showcase-info>p{
+    margin: 30px 0;
+    max-width: 75%;
+    font-size: 12px;
+  }
+  .showcase-info>h2{
+    font-size: 45px;
+    line-height: 45px;
+  }
+  
+  .showcase .container a img{
+    left: 50%;
+    position: relative;
+    right: 50%;
+    width: 20px;
+    /* z-index: 1; */
+  }
+
+}
+
+/* ============ END OF SHOWCASE ========== */
+
+
+
+/* ============ WHY =============*/
+
+.why{
+  background: var(--bg-color);
+  height: auto;
+  padding: 50px; 
+  text-align: center; 
+}
+
+.why .bold{
+  color: var(--secondary-color);
+}
+
+.why h4{
+  margin: auto;
+  width: 500px;
+}
+
+.content{
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 60px auto;
+}
+
+.item{
+  background: #ffffff;
+  flex: 0 1 auto;
+  height: 266px;
+  margin: 5px;
+  padding: 20px;
+  text-align: left;
+  transition: all .5s ease-in-out;
+  width: 260px;
+}
+
+.item:hover{
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.item:nth-child(even){
+  margin-bottom: 80px;
+}
+
+/*========== END OF WHY ==========*/
+
+
+/* =========== FEATURES =========== */
+
+.features{
+  height: auto;
+  padding: 50px 150px;
+}
+
+.features .details{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.features .container>p{
+  color: var(--secondary-color);
+}
+
+.features .container>h4{
+  margin-bottom: 15px;
+}
+
+.details .row-1{
+  margin: 0 50px 0 0;
+}
+
+.row-1 p{
+  background: var(--bg-color);
+  border-radius: 50%;
+  color: var(--secondary-color);
+  height: 150px;
+  margin: 20px 20px 20px 0px;
+  padding: 40px 10px;
+  text-align: center;
+  transition: all .5s ease-in-out;
+  width: 150px;
+}
+
+.row-1 p:hover{
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+
+.details .row-2>img{
+  max-height: 500px;
+  max-width: 800px;
+}
+
+/*========== END OF FEATURES ===========*/
+
+
+
+/* =========== START ============ */
+
+.start{
+  align-items: center;
+  background: var(--secondary-color);
+  display: flex;
+  flex-flow: row wrap;
+  height: auto;
+  justify-content: center;
+}
+
+.start>img{
+  flex: 0 1 auto;
+  height:500px ;
+  width: 800px;
+}
+
+.blue{
+  color: var(--secondary-color);
+}
+
+.start a{
+  border: var(--primary-color);
+  display: inline-block;
+  font-family: var(--medium);
+  margin: 50px 0 0 0;
+}
+
+.start>.container{
+  color: #ffffff;
+  flex: 1 1 auto;
+  padding: 20px 50px 0px 0px;
+  text-align: left;
+  width: 500px;
+}
+
+.start>.container h4{
+  padding: 0 0 30px 0;
+}
+
+/* =========== END OF START ============ */
+
+
+/* ============== TESTIMONIAL ============== */
+
+.testimonial{
+  background: var(--bg-color);
+  height: auto;
+}
+
+.testimonial>.container{
+  padding: 70px 0;
+}
+
+.feedbacks{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 40px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.feedbacks::-webkit-scrollbar{
+  height: 2px;
+}
+
+.feed{
+  align-items: flex-start;
+  background: #ffffff;
+  display: flex;
+  flex: 1 0 auto;
+  height: 350px;
+  justify-content: space-between;
+  margin: 0 10px 0 0;
+  padding: 30px;
+  transition: all .5s ease-in-out;
+  width: 600px;
+}
+
+.feed:hover{
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+/* =========== END OF TESTIMONIAL ============ */
+
+
+/* =========== CLIENT =========== */
+
+.client{
+  text-align: center;
+  padding: 50px;
+}
+
+.company{
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 0 100px;
+  width: 90%;
+}
+
+.company div{
+  align-items: center;
+  border: 2px dashed var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  width: 130px;
+  margin: 100px 0px 0px 0px;
+}
+
+.company img{
+  margin: 90px;
+  width: 70%;
+}
+
+.company div:nth-child(odd){
+  margin: 0 0 0 0;
+}
+
+.company div:nth-child(even){
+
+}
+
+/* ============= END OF CLIENT ============== */
+
+
+
+/* ============ PRICING ============= */
+
+.pricing{
+  background: var(--bg-color);
+  padding: 70px;
+}
+
+.pricing .container>h4{
+  padding: 0 0 30px 90px;
+}
+
+.price-list{
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  margin: 20px auto;
+  width: 90%;
+
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0 1 auto;
+  background: #ffffff;
+  padding: 50px 0;
+  width: 500px;
+}
+
+/* ============= END OF PRICING ============== */
+
+
+/* =============== HELP =============== */
+
+.help{
+  background: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+}
+
+
+/* =============== END OF HELP =============== */
+
+
+
+
+/* =============== FOOTER =============== */
+
+footer{
+  
+}
+
+.row{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 60px;
+  flex-flow: row wrap;
+}
+.col{
+  flex: 0 1 20%;
+  padding: 20px;
+}
+
+.col:last-child img{
+  padding: 0 10px 0 0;
+}
+
+.row:last-child{
+  justify-content: space-evenly;
+  padding-top: 0px;
+}
+
+.row>p:nth-child(1){
+  flex: 7 0 auto;
+}
+
+.row>p:nth-child(2){
+  flex: 1 0 auto;
+}
+/* =============== END OF FOOTER =============== */
