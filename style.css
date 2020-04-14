@@ -289,7 +289,7 @@ header {
   .showcase-info>p{
     margin: 30px 0;
     max-width: 75%;
-    font-size: 12px;
+    /* font-size: 1px; */
   }
   .showcase-info>h2{
     font-size: 45px;
@@ -300,8 +300,7 @@ header {
     left: 50%;
     position: relative;
     right: 50%;
-    width: 20px;
-    /* z-index: 1; */
+    width: 15px;
   }
 
 }
@@ -354,6 +353,52 @@ header {
 
 .item:nth-child(even){
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 800px){
+  .why h4{
+    font-size: 30px;
+    width: 100%;
+  }
+  
+  .content{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 40px auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .content::-webkit-scrollbar{
+    height: 2px;
+  }
+  
+  .item{
+    flex: 0 0 auto;
+    height: 220px;
+    width: 200px;
+    margin: 5px;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .item svg{
+    height: 40px;
+    width: 45px;
+  }
+
+  .item h5{
+    font-size: 20px;
+  }
+  .item p{
+    font-size: 12px;
+  }
+
+  .item:nth-child(even){
+    margin-bottom: 0px;
+  }
 }
 
 /*========== END OF WHY ==========*/
