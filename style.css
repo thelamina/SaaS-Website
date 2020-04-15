@@ -541,7 +541,6 @@ header {
   color: #ffffff;
   flex: 1 1 auto;
   padding: 20px 50px 20px 20px;
-  text-align: left;
   width: 500px;
 }
 
@@ -554,6 +553,14 @@ header {
   .start>img{
     height: 100%;
     width: 100%;
+  }
+
+  .start p{
+    font-size: 14px;
+  }
+
+  .start h4{
+    font-size: 30px;
   }
   
 }
