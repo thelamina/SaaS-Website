@@ -635,6 +635,7 @@ header {
     
   }
 }
+
 /* =========== END OF TESTIMONIAL ============ */
 
 
@@ -675,10 +676,25 @@ header {
   margin: 0 0 0 0;
 }
 
-.company div:nth-child(even){
 
+@media screen and (max-width:800px){
+  .client h4{
+    font-size: 30px;
+  }
+  .company{
+    padding: 20px;
+  }
+  .company div{
+    align-items: center;
+    border: 2px dashed var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    width: 80px;
+    margin: 10px;
+  }  
 }
-
 /* ============= END OF CLIENT ============== */
 
 
