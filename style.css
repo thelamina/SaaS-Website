@@ -756,6 +756,12 @@ header {
   padding: 40px;
 }
 
+@media screen and (max-width:800px){
+  .help h4{
+    font-size: 25px;
+  }
+}
+
 
 /* =============== END OF HELP =============== */
 
