@@ -499,14 +499,8 @@ header {
     color: #ffffff;
   }
 
-  .details .row-2>p{
-
-  }
-
   .details .row-2>img{
-    /* min-height: 200px; */
     width: calc(100%);
-    /* display: none; */
   }
   
 }
@@ -528,8 +522,8 @@ header {
 
 .start>img{
   flex: 0 1 auto;
-  height:500px ;
-  width: 800px;
+  height: 500px;
+  width: auto;
 }
 
 .blue{
@@ -540,19 +534,28 @@ header {
   border: var(--primary-color);
   display: inline-block;
   font-family: var(--medium);
-  margin: 50px 0 0 0;
+  margin: 30px 0px;
 }
 
 .start>.container{
   color: #ffffff;
   flex: 1 1 auto;
-  padding: 20px 50px 0px 0px;
+  padding: 20px 50px 20px 20px;
   text-align: left;
   width: 500px;
 }
 
 .start>.container h4{
   padding: 0 0 30px 0;
+}
+
+
+@media screen and (max-width: 800px){
+  .start>img{
+    height: 100%;
+    width: 100%;
+  }
+  
 }
 
 /* =========== END OF START ============ */
