@@ -414,7 +414,6 @@ header {
 .features .details{
   display: flex;
   justify-content: center;
-  
 }
 
 .features .container>p{
@@ -447,8 +446,69 @@ header {
 }
 
 .details .row-2>img{
-  max-height: 500px;
-  max-width: 800px;
+  /* height: 80%; */
+  width: 100%;
+}
+
+
+@media screen and (max-width:800px){
+  
+  .features{
+    height: auto;
+    padding: 50px 30px;
+  }
+  
+  .features .details{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  
+  .features .container>p{
+    color: var(--secondary-color);
+  }
+  
+  .features .container>h4{
+    margin-bottom: 15px;
+  }
+  
+  .details .row-1{
+    margin: 0px;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    
+
+  }
+  
+  .row-1 p{
+    background: var(--bg-color);
+    border-radius: 50%;
+    color: var(--secondary-color);
+    height: 150px;
+    width: 150px;
+    /* margin: ; */
+    padding: 40px 10px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    font-size: 12px;
+  }
+  
+  .row-1 p:hover{
+    background: var(--secondary-color);
+    color: #ffffff;
+  }
+
+  .details .row-2>p{
+
+  }
+
+  .details .row-2>img{
+    /* min-height: 200px; */
+    width: calc(100%);
+    /* display: none; */
+  }
+  
 }
 
 /*========== END OF FEATURES ===========*/
