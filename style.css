@@ -712,10 +712,10 @@ header {
 
 .price-list{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-flow: row wrap;
-  margin: 20px auto;
-  width: 90%;
+  margin: 20px 0;
+  width: 100%;
 
 }
 
@@ -725,8 +725,23 @@ header {
   justify-content: space-around;
   flex: 0 1 auto;
   background: #ffffff;
-  padding: 50px 0;
-  width: 500px;
+  padding: 40px 0;
+  width: 400px;
+  margin: 10px;
+}
+
+@media screen and (max-width:800px){
+  .pricing{
+    padding: 10px;
+  }
+
+  .pricing .container>h4{
+    padding: 0px;
+    font-size: 30px;
+  }
+  .pricing h2{
+    /* font-size: 45px; */
+  }
 }
 
 /* ============= END OF PRICING ============== */
