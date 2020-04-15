@@ -1,3 +1,80 @@
+
+
+@font-face {
+  font-family: 'cera_problack';
+  src: url('assets/fonts/cerapro-black-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_problack_italic';
+  src: url('assets/fonts/cerapro-blackitalic-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-blackitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_probold';
+  src: url('assets/fonts/cerapro-bold-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_probold_italic';
+  src: url('assets/fonts/cerapro-bolditalic-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_proitalic';
+  src: url('assets/fonts/cerapro-italic-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_prolight';
+  src: url('assets/fonts/cerapro-light-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_prolight_italic';
+  src: url('assets/fonts/cerapro-lightitalic-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-lightitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_promedium';
+  src: url('assets/fonts/cerapro-medium-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera_proregular';
+  src: url('assets/fonts/cerapro-regular-webfont.woff2') format('woff2'),
+       url('assets/fonts/cerapro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
 /* RESET */
 *{
   box-sizing: border-box;
@@ -10,13 +87,13 @@
 
 :root{
   /* Fonts */
-  --black: 'Cera Pro Black', 'Cera Pro';
-  --bold: 'Cera Pro Bold', 'Cera Pro';
-  --medium: 'Cera Pro Medium', 'Cera Pro';
-  --regular: 'Cera Pro Regular', 'Cera Pro';
-  --light: 'Cera Pro Light', 'Cera Pro';
-  --italic: 'Cera Pro Italic', 'Cera Pro';
-  --light-italic : 'Cera Pro Light Italic';
+  --black: cera_problack;
+  --bold: cera_probold;
+  --medium: cera_promedium;
+  --regular: cera_proregular;
+  --light: cera_prolight;
+  --italic: cera_proitalic;
+  --light-italic : cera_prolight_italic;
 
   /* Colors */
   --secondary-color: #0058FF;
@@ -26,11 +103,14 @@
 }
 
 
+
+
+
 /* ============== ELEMENTS ============ */
 
 body{
   color: var(--primary-color);
-  font-family: 'Cera Pro', Arial, Helvetica, sans-serif;
+  font-family: cera_promedium;
   overflow-x: hidden;
 }
 
